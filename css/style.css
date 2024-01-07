@@ -1,0 +1,135 @@
+html {
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
+
+ *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+ 
+ h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+}
+
+h2,h3,h4,h5,h6 {
+    font-family: 'Righteous', sans-serif;
+}
+
+.bd {
+    border: 2px dotted black;
+}
+.btn {
+    --bs-btn-padding-x: 2.75rem;
+}
+body {
+    height: 100vh;
+    background-color: #f7ecde;
+}
+
+
+h1 {
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+}
+.style-h1::before {
+    content: "";
+    position: absolute;
+    top: 65%;
+    left: 0%;
+    bottom: 50%;
+    right: 0; 
+    width: 100%;
+    height: 35%;
+    background-color: #fec260;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+#home .style-h1:hover::before{
+    height: 70%;
+     /* bottom: 100%; */
+    top: 35%; 
+}
+
+h2.color-bookmark {
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    color: transparent;
+    transition: all 2s;
+}
+h2.color-bookmark:hover{
+    background-image: linear-gradient(to right,#b5ac49 , #3ca55c);
+    /* transition: 2s; */
+    transform: scale(1.2);
+}
+
+a {
+    color: white;
+}
+
+.worklayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* transform: translate(50%,50%); */
+}
+.xMark {
+    color:red;
+}
+.wrongThing {
+    color: red;
+}
+.green {
+    color: green;
+}
+.bg {
+    color: black;
+}
+@media screen and (min-Width:0px) and (max-width:576px) {
+    h2.color-bookmark {
+font-size: 15px;
+    }
+    .container {
+        width: 100%;
+    }
+}
+/* @media screen and (min-Width:577px) and (max-width:992px) {
+    h2.color-bookmark {
+        font-size: 15px;
+            }
+} */
+/* @media screen and (min-Width:993px) and (max-width:1200px) {
+    h2.color-bookmark {
+        font-size: 15px;
+            }
+} */
+/* @media screen and (min-Width:1201px) and (max-width:1400px) {
+    h2.color-bookmark {
+        font-size: 15px;
+            }
+} */
+/* @media screen and (min-Width:1401px) and (max-width:1600px) {
+    h2.color-bookmark {
+        font-size: 15px;
+            }
+} */
+/* @media screen and (min-Width:1601px) and (max-width:1800px) {
+    h2.color-bookmark {
+        font-size: 15px;
+            }
+}
+@media screen and (min-Width:1801px) and (max-width:2000px) {
+    h2.color-bookmark {
+        font-size: 15px;
+            }
+} */

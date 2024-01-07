@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <section id="home" class="p-5">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h1 class="fw-bolder style-h1 text-center">Bookmarker</h1>
+                    </div>
+
+
+                    <div class="bd mt-5"></div>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h2 class=" mt-4 color-bookmark"><i class="fa-solid fa-bookmark me-2"></i>Bookmark your favorite
+                            sites<i class="fa-solid fa-bookmark ms-2"></i></h2>
+                    </div>
+
+                    <div class="d-flex flex-column">
+
+
+                        <div class="mb-3">
+                            <label class="mb-2 fw-bolder" for="SiteName"><i class="fa-solid fa-book-bookmark me-2"></i>
+                                Site Name</label>
+                            <input oninput="valiName()" id="SiteName" type="text" class="form-control ">
+
+                            <div id="wrongRegex" class="alert alert-danger mt-2 d-none" >Hi there Enter WebSite Name</div>
+
+
+                            <div id="wrongLayer" class=" mt-2 worklayer d-flex justify-content-center align-items-center align-middle d-none">
+                                <div class="card p-3" style="width: 35rem; height: 20rem;">
+                                    <div class="card-body">
+                                        <i class="fa-solid xMark fa-circle-xmark fs-3 mb-2"></i><i
+                                            class="fa-solid xMark fa-circle-xmark fs-3 mb-2 mx-2"></i><i
+                                            class="fa-solid xMark fa-circle-xmark fs-3 mb-2"></i>
+                                            <button onclick="closeBtn()" id="closeLink" class="btn-close bg-success float-end"></button> 
+                                        <h4 class="wrongThing">
+                                            Site Name or Url is not valid, Please follow the rules below :
+                                        </h4>
+                                        <h5 class="green"><i class="fa-solid fa-circle-right fs-3 xMark mt-4 me-2"></i>Site name must
+                                            contain at least 3 characters </h5>
+                                        <h5 class="green"><i class="fa-solid fa-circle-right fs-3 xMark mt-4 me-2"></i>Site URL must be a valid one</h5>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div>
+                                <label class="my-2 fw-bolder" for="SiteURL"><i class="fa-solid fa-link me-2"></i> Site
+                                    URL</label>
+                                <input oninput="validUrl()" id="SiteURL" type="text" class="form-control">
+                                <div id="wrongRegexUrl" class="alert alert-danger mt-2 d-none">Hi there just url please
+                                </div>
+                            </div>
+
+                            <a href=""></a>
+
+                            <div class="mt-4 text-center">
+                                <button onclick="addData()" id="Btn" class="btn btn-success">Submit</button>
+                                <button onclick="clearAll()" class="btn btn-danger">clear</button>
+                            </div>
+
+
+                        </div>
+                        <div class="bd mt-5"></div>
+                        <div class="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+   <div class="container">
+    <table class="table text-center mt-3">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="tabelTbody">
+
+        </tbody>
+    </table>
+   </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
