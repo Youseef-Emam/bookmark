@@ -16,7 +16,7 @@ if (localStorage.getItem("siteDetails") != null) {
 
 
 function addData() {
-    if (valiName() == true && validUrl() == true) {
+    if (validName() == true && validUrl() == true) {
         var proudctData = {
             SiteNameValue: SiteName.value,
             SiteURLValue: SiteURL.value
@@ -27,9 +27,9 @@ function addData() {
         console.log(dataBase);
 
         showData();
-        // clearAll();
+        clearAll();
     }
-    else if(valiName() == false && validUrl() == false) {
+    else if(validName() == false && validUrl() == false) {
         wrongLayer.classList.remove("d-none")
         wrongLayer.classList.add("d-block")
     }
@@ -70,7 +70,7 @@ function visitSite(index) {
     window.open(VisitSite, "_blank")
 }
 
-function valiName() {
+function validName() {
     var rgexName = /^[a-zA-Z]{4,60}$/;
     var test = SiteName.value;
     rgexName.test(test)
@@ -91,9 +91,10 @@ function valiName() {
         return false
     }
 }
+// 
 
 function validUrl() {
-    var rgexUrl = /^(ftp|http|https):\/\/[^ "]+$/;
+    var rgexUrl = /^(http(s):\/\/.)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)$/;
     var test1 = SiteURL.value;
     if (rgexUrl.test(test1) == true) {
         SiteURL.classList.add("is-valid");
