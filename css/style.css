@@ -58,7 +58,7 @@ h1 {
 
 #home .style-h1:hover::before {
     height: 70%;
-    /* bottom: 100%; */
+   
     top: 35%;
 }
 
@@ -71,7 +71,7 @@ h2.color-bookmark {
 
 h2.color-bookmark:hover {
     background-image: linear-gradient(to right, #b5ac49, #3ca55c);
-    /* transition: 2s; */
+    
     transform: scale(1.2);
 }
 
@@ -115,36 +115,7 @@ a {
 
     .container {
         width: 100%;
+        margin: 0px 0px 0px 0px;
     }
-}
 
-/* @media screen and (min-Width:577px) and (max-width:992px) {
-    h2.color-bookmark {
-        font-size: 15px;
-            }
-} */
-/* @media screen and (min-Width:993px) and (max-width:1200px) {
-    h2.color-bookmark {
-        font-size: 15px;
-            }
-} */
-/* @media screen and (min-Width:1201px) and (max-width:1400px) {
-    h2.color-bookmark {
-        font-size: 15px;
-            }
-} */
-/* @media screen and (min-Width:1401px) and (max-width:1600px) {
-    h2.color-bookmark {
-        font-size: 15px;
-            }
-} */
-/* @media screen and (min-Width:1601px) and (max-width:1800px) {
-    h2.color-bookmark {
-        font-size: 15px;
-            }
 }
-@media screen and (min-Width:1801px) and (max-width:2000px) {
-    h2.color-bookmark {
-        font-size: 15px;
-            }
-} */
